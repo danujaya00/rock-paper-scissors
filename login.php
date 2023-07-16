@@ -16,13 +16,13 @@
             $message = "User name and password are required";
             $failure = true;
         } else {
-            $check = hash('md5', $_POST['pass']);
-            $pwd = hash('md5', 'php123');
+            $check = hash('md5', 'XyZzy12*_'.$_POST['pass']);
+            $pwd = hash('md5', 'XyZzy12*_php123');
             if ($check != $pwd) {
                 $message = "Incorrect password";
                 $failure = true;
             } else {
-                header("Location: game.php?$_POST[who]");
+                header("Location: game.php?name=".urlencode($_POST['who']));
                 return;
             }
         }
@@ -35,7 +35,7 @@
     <div>
         <h1>Please Login</h1>
         <?php 
-        if ( $failure !== false ) {
+        if ( $failure != false ) {
             echo('<p style="color: red;">'.htmlentities($message)."</p>\n");
         }
         ?>
