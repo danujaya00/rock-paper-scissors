@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   <title>Rock Paper Scissors</title>
+   <title>0b8d4815</title>
    <?php require_once "bootstrap.php"; ?>
 </head>
 

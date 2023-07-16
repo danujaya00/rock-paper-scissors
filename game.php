@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Rock Paper Scissors</title>
+    <title>0b8d4815</title>
     <?php require_once "bootstrap.php"; ?>
 
     <?php
@@ -15,23 +15,24 @@
     }
     $names = array('Rock', 'Paper', 'Scissors');
     $human = isset($_POST["human"]) ? $_POST['human'] + 0 : -1;
-    $computer = rand(0,2);
+    $computer = rand(0, 2);
 
-    function check($computer, $human) {
-        
-        if ( $human == $computer ) {
+    function check($computer, $human)
+    {
+
+        if ($human == $computer) {
             return "Tie";
-        } else if ( $human == 0 && $computer == 1 ) {
+        } else if ($human == 0 && $computer == 1) {
             return "You lose";
-        } else if ( $human == 0 && $computer == 2 ) {
+        } else if ($human == 0 && $computer == 2) {
             return "You win";
-        } else if ( $human == 1 && $computer == 0 ) {
+        } else if ($human == 1 && $computer == 0) {
             return "You win";
-        } else if ( $human == 1 && $computer == 2 ) {
+        } else if ($human == 1 && $computer == 2) {
             return "You lose";
-        } else if ( $human == 2 && $computer == 0 ) {
+        } else if ($human == 2 && $computer == 0) {
             return "You lose";
-        } else if ( $human == 2 && $computer == 1 ) {
+        } else if ($human == 2 && $computer == 1) {
             return "You win";
         }
     }
@@ -64,6 +65,13 @@
         <?php
         if ($human == '-1') {
             print "Please select a strategy and press Play.\n";
+        } else if ($human == 3) {
+            for ($c = 0; $c < 3; $c++) {
+                for ($h = 0; $h < 3; $h++) {
+                    $r = check($c, $h);
+                    print "Human=$names[$h] Computer=$names[$c] Result=$r\n";
+                }
+            }
         } else {
             print "Your Play=$names[$human] Computer Play=$names[$computer] Result=$result\n";
         }

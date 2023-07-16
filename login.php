@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Rock Paper Scissors</title>
+    <title>0b8d4815</title>
     <?php require_once "bootstrap.php"; ?>
 
     <?php
@@ -45,7 +45,7 @@
             <input name="who" type="text" /><br />
             <label for="pass"><b>Password</b></label>
             <input name="pass" type="password" /><br />
-            <input type="submit" value="Login" />
+            <input type="submit" value="Log In" />
             <input type="submit" value="Cancel" name="Cancel" />
         </form>
 </body>
